@@ -1,0 +1,2 @@
+Q How Late Arrival Works ?
+Ans When Attendence is uploaded a shift of format { name: "shift 1", startTime: "10:00 AM", endTime: "6:30 PM", } is attached to every row of employee which will used later for checking employee lates and other operations.

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <title>Battersea Web Expert HR Panel</title>
+      <meta content="" name="description">
+      <meta content="" name="keywords">
+      <link href="assets/img/favicon.png" rel="icon">
+      <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+      <link href="assets/css/style.css" rel="stylesheet">
+   </head>
+   <body>
+      <header id="header" class="header fixed-top d-flex align-items-center">
+         <div class="d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo d-flex align-items-center">
+            <img src="assets/img/logo.png" alt="">
+            </a>
+            <i class="bi bi-list toggle-sidebar-btn"></i>
+         </div>
+         <div class="search-bar">
+            <form class="search-form d-flex align-items-center" method="POST" action="#">
+               <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+               <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+            </form>
+         </div>
+         <nav class="header-nav ms-auto">
+            <ul class="d-flex align-items-center">
+               <li class="nav-item d-block d-lg-none">
+                  <a class="nav-link nav-icon search-bar-toggle " href="#">
+                  <i class="bi bi-search"></i>
+                  </a>
+               </li>
+               <li class="nav-item dropdown pe-3">
+                  <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                  <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+                  <span class="d-none d-md-block dropdown-toggle ps-2">Admin</span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                     <li class="dropdown-header">
+                        <h6>Admin</h6>
+                        <span>Battersea HR Manager</span>
+                     </li>
+                     <li>
+                        <hr class="dropdown-divider">
+                     </li>
+                     <li>
+                        <a class="dropdown-item d-flex align-items-center" href="#">
+                        <i class="bi bi-person"></i>
+                        <span>Profile</span>
+                        </a>
+                     </li>
+                     <li>
+                        <hr class="dropdown-divider">
+                     </li>
+                     <li>
+                        <a class="dropdown-item d-flex align-items-center" href="add-single-employee.html">
+                        <i class="bi bi-plus-circle-fill"></i>
+                        <span> Add Member</span>
+                        </a>
+                     </li>
+                     <li>
+                        <hr class="dropdown-divider">
+                     </li>
+                     <li>
+                        <a class="dropdown-item d-flex align-items-center" href="#">
+                        <i class="bi bi-gear"></i>
+                        <span>Account Settings</span>
+                        </a>
+                     </li>
+                     <li>
+                        <hr class="dropdown-divider">
+                     </li>
+                     <li>
+                        <a class="dropdown-item d-flex align-items-center" href="#">
+                        <i class="bi bi-box-arrow-right"></i>
+                        <span>Sign Out</span>
+                        </a>
+                     </li>
+                  </ul>
+               </li>
+            </ul>
+         </nav>
+      </header>
+      <aside id="sidebar" class="sidebar">
+         <ul class="sidebar-nav" id="sidebar-nav">
+            <li class="nav-item">
+               <a class="nav-link " href="index.html">
+               <i class="bi bi-grid"></i>
+               <span>Dashboard</span>
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link collapsed" href="holiday.html">
+               <i class="bi bi-calendar-check"></i>
+               <span>Holiday</span>
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link collapsed" href="#">
+               <i class="bi bi-file-earmark-bar-graph"></i>
+               <span>Performance</span>
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link collapsed" href="#">
+               <i class="bi bi-gear"></i>
+               <span>Settings</span>
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link collapsed" href="#">
+               <i class="bi bi-gear"></i>
+               <span>Attendance</span>
+               </a>
+            </li>
+         </ul>
+      </aside>
+      <main id="main" class="main">
+         <div class="pagetitle">
+            <h1>Dashboard</h1>
+            <nav>
+               <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                  <li class="breadcrumb-item active">Dashboard</li>
+               </ol>
+            </nav>
+         </div>
+         <section class="section dashboard">
+           
+            <div class="row">
+               <div class="col-lg-8 col-md-6">
+                  <div class="card info-card text-center">
+                     <div class="card-body pb-0">
+                        <div class="row align-items-center">
+                           <div class="col-lg-4">
+                              <h5 class="card-title">Leave Taken</h5>
+                              <div class="d-flex align-items-center justify-content-center mb-2 mt-3">
+                                 <h6>9</h6>
+                              </div>
+                           </div>
+                           <div class="col-lg-4">
+                              <h5 class="card-title">Remaining</h5>
+                              <div class="d-flex align-items-center justify-content-center mb-2 mt-3">
+                                 <h6>3</h6>
+                              </div>
+                           </div>
+                           <div class="col-lg-4">
+                           <button class="btn btn-primary"><a href="#" data-bs-toggle="modal" data-bs-target="#leave-popup" class="text-white">Apply Leave</a></button>
+
+                           </div>
+                        </div>
+                      
+                     </div>
+                  </div>
+               </div>
+
+               <div class="col-lg-4 col-md-6">
+                  <div class="card info-card">
+                     <div class="card-body pb-0">
+                        <h5 class="card-title mb-4">Upcoming Holidays</h5>
+                        <p class="mb-2 mt-3">25 Dec 2022 - Christmas</p>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="col-lg-8 col-md-6">
+                  <div class="card info-card">
+                     <div class="card-body pb-0">
+                        <h5 class="card-title mb-3">Late Arrival</h5>
+                        <table class="table table-striped">
+                           <thead>
+                              <tr>
+                                 <th>Date</th>
+                                 <th>Punch In</th>
+                                 <th>Punch Out</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td>12 Nov, 2022</td>
+                                 <td>10.17 AM</td>
+                                 <td>6.45 PM</td>
+                              </tr>
+                              <tr>
+                                 <td>18 Nov, 2022</td>
+                                 <td>10.20 AM</td>
+                                 <td>6.30 PM</td>
+                              </tr>
+                              <tr>
+                                 <td>19 Nov, 2022</td>
+                                 <td>10.16 AM</td>
+                                 <td>6.30 PM</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </section>
+         <div class="modal fade" id="leave-popup">
+            <div class="modal-dialog modal-lg modal-dialog-scrollable">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <h4 class="modal-title">Apply Leave</h4>
+                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-start">
+                     <form action="#" class="row g-3 validation" novalidate>
+                        <div class="col-12">
+                           <div class="row">
+                              <div class="col-6">
+                                 <div class="input-group has-validation">
+                                    <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-person-fill"></i></span>
+                                    <input type="text" name="name" class="form-control" value="Vikas Pandey" required="">
+                                    <div class="invalid-feedback">Please Enter Your Name.</div>
+                                 </div>
+                              </div>
+                              <div class="col-6">
+                                 <div class="input-group has-validation">
+                                    <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-microsoft-teams"></i></span>
+                                    <select class="form-select"  required="">
+                                       <option value="">--- Select Team ---</option>
+                                       <option selected="">Web Development Team</option>
+                                       <option>SEO Team</option>
+                                       <option>Content Writer Team</option>
+                                    </select>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-12">
+                           <div class="row">
+                              <div class="col-6">
+                                 <label for="" class="mb-3"><b>Select CL/Leave</b> </label>
+                                 <div class="input-group has-validation">
+                                    <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-microsoft-teams"></i></span>
+                                    <select class="form-select"  required="">
+                                       <option value="">--- Select CL/Leave ---</option>
+                                       <option>CL</option>
+                                       <option>Leave</option>
+                                    </select>
+                                 </div>
+                              </div>
+                              <div class="col-6">
+                                 <label for="" class="mb-3"><b>Reason For Leave</b></label>
+                                 <div class="input-group has-validation">
+                                    <span class="input-group-text" id="inputGroupPrepend">
+                                    <i class="bi bi-microsoft-teams"></i></span>
+                                    <select class="form-select"  required="">
+                                       <option value="">--- Select Reason For Leave ---</option>
+                                       <option>Vacation</option>
+                                       <option>Sick - Self</option>
+                                       <option>Sick - Family</option>
+                                       <option>Doctor Appointment</option>
+                                       <option>Others</option>
+                                    </select>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-12">
+                           <div class="row">
+                              <div class="col-6">
+                                 <label for="" class="mb-3"><b>Leave date</b></label>
+                                 <input type="date" class="form-control" value="" required="">
+                              </div>
+                              <div class="col-6">
+                                 <label for="" class="mb-3"><b>Return date</b></label>
+                                 <input type="date" class="form-control" value="" required="">
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-12">
+                           <textarea class="form-control" name="" id="" cols="30" rows="3" value="" placeholder="Message Here..."></textarea>
+                        </div>
+                        <div class="col-12">
+                           <button class="btn btn-primary w-100" type="submit">Submit Request</button>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+      <footer id="footer" class="footer">
+         <div class="copyright">
+            &copy; Copyright <strong><span>Battersea Web Expert</span></strong>. All Rights Reserved
+         </div>
+      </footer>
+      <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+      <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/js/main.js"></script>
+   </body>
+</html>

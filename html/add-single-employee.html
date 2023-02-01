@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <title>Battersea Web Expert HR Panel</title>
+      <meta content="" name="description">
+      <meta content="" name="keywords">
+      <link href="assets/img/favicon.png" rel="icon">
+      <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+      <link href="assets/css/style.css" rel="stylesheet">
+   </head>
+   <body>
+      <header id="header" class="header fixed-top d-flex align-items-center">
+         <div class="d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo d-flex align-items-center">
+            <img src="assets/img/logo.png" alt="">
+            </a>
+            <i class="bi bi-list toggle-sidebar-btn"></i>
+         </div>
+         <div class="search-bar">
+            <form class="search-form d-flex align-items-center" method="POST" action="#">
+               <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+               <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+            </form>
+         </div>
+         <nav class="header-nav ms-auto">
+            <ul class="d-flex align-items-center">
+               <li class="nav-item d-block d-lg-none">
+                  <a class="nav-link nav-icon search-bar-toggle " href="#">
+                  <i class="bi bi-search"></i>
+                  </a>
+               </li>
+               <li class="nav-item dropdown pe-3">
+                  <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                  <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+                  <span class="d-none d-md-block dropdown-toggle ps-2">Admin</span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                     <li class="dropdown-header">
+                        <h6>Admin</h6>
+                        <span>Battersea HR Manager</span>
+                     </li>
+                     <li>
+                        <hr class="dropdown-divider">
+                     </li>
+                     <li>
+                        <a class="dropdown-item d-flex align-items-center" href="#">
+                        <i class="bi bi-person"></i>
+                        <span>Profile</span>
+                        </a>
+                     </li>
+                     <li>
+                        <hr class="dropdown-divider">
+                     </li>
+                     <li>
+                        <a class="dropdown-item d-flex align-items-center" href="add-single-employee.html">
+                        <i class="bi bi-plus-circle-fill"></i>
+                        <span> Add Member</span>
+                        </a>
+                     </li>
+                     <li>
+                        <hr class="dropdown-divider">
+                     </li>
+                     <li>
+                        <a class="dropdown-item d-flex align-items-center" href="#">
+                        <i class="bi bi-gear"></i>
+                        <span>Account Settings</span>
+                        </a>
+                     </li>
+                     <li>
+                        <hr class="dropdown-divider">
+                     </li>
+                     <li>
+                        <a class="dropdown-item d-flex align-items-center" href="#">
+                        <i class="bi bi-box-arrow-right"></i>
+                        <span>Sign Out</span>
+                        </a>
+                     </li>
+                  </ul>
+               </li>
+            </ul>
+         </nav>
+      </header>
+      <aside id="sidebar" class="sidebar">
+         <ul class="sidebar-nav" id="sidebar-nav">
+            <li class="nav-item">
+               <a class="nav-link " href="index.html">
+               <i class="bi bi-grid"></i>
+               <span>Dashboard</span>
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link collapsed" href="all-employee.html">
+               <i class="bi bi-person"></i>
+               <span>All Employees</span>
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link collapsed" href="holiday.html">
+               <i class="bi bi-calendar-check"></i>
+               <span>Holiday</span>
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link collapsed" href="#">
+               <i class="bi bi-microsoft-teams"></i>
+               <span>Teams</span>
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link collapsed" href="#">
+               <i class="bi bi-file-earmark-bar-graph"></i>
+               <span>Performance</span>
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link collapsed" href="#">
+               <i class="bi bi-gear"></i>
+               <span>Settings</span>
+               </a>
+            </li>
+         </ul>
+      </aside>
+      <main id="main" class="main">
+         <div class="pagetitle">
+            <h1>Add Employee</h1>
+            <nav>
+               <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                  <!--  <li class="breadcrumb-item active">Name of Employee</li> -->
+               </ol>
+            </nav>
+         </div>
+         <section class="section">
+            <form action="#" class="row g-3 validation" novalidate>
+               <div class="container">
+                  <div class="col-lg-12 mb-4">
+                     <div class="form-group row">
+                        <div class="col-lg-4">
+                           <label for="" class="mb-3">Upload Photo</label>
+                           <img id="frame" src="" class="img-fluid" />
+                           <input class="form-control" type="file" id="formFile" onchange="preview()" required="">
+                           <div class="invalid-feedback">Upload Photo.</div>
+                           <button onclick="clearImage()" class="btn btn-primary mt-3">Remove Photo</button>
+                        </div>
+                        <div class="col-lg-4">
+                           <label for="" class="mb-3">Name</label>
+                           <input type="text" class="form-control" placeholder="Enter Name" required="">
+                           <div class="invalid-feedback">Please Enter Your Name.</div>
+                        </div>
+                        <div class="col-lg-4">
+                           <label for="" class="mb-3">Designation</label>
+                           <select class="form-select" required="">
+                              <option value="">--- Select Position ---</option>
+                              <option>Manager</option>
+                              <option>Team Leader</option>
+                              <option>Web Developer</option>
+                              <option>Senior Web Developer</option>
+                              <option>Web Designer</option>
+                              <option>Senior Web Designer</option>
+                              <option >SEO Executive</option>
+                              <option>Senior SEO Executive</option>
+                              <option>Content Writer</option>
+                              <option>Senior Content Writer</option>
+                              <option>Video Editor</option>
+                              <option>Senior Video Editor</option>
+                           </select>
+                           <div class="invalid-feedback">Please Select Designation.</div>
+                        </div>
+                        <div class="col-lg-4 mt-4">
+                           <label for="" class="mb-3">Team</label>
+                           <select class="form-select"  required="">
+                              <option value="">--- Select Team ---</option>
+                              <option>Web Development Team</option>
+                              <option>SEO Team</option>
+                              <option>Content Writer Team</option>
+                           </select>
+                           <div class="invalid-feedback">Please Select Team.</div>
+                        </div>
+                        <div class="col-lg-4 mt-4">
+                           <label for="" class="mb-3">Date of Joining</label>
+                           <input type="date" class="form-control" value="" required="">
+                           <div class="invalid-feedback">Enter Date of Joining.</div>
+                        </div>
+                        <div class="col-lg-4 mt-4">
+                           <label for="" class="mb-3">Employee ID</label>
+                           <input type="text" class="form-control" placeholder="Enter Employee ID" required="">
+                           <div class="invalid-feedback">Enter Employee ID.</div>
+                        </div>
+                     </div>
+                  </div>
+                  <hr>
+                  <div class="col-lg-12 mb-4">
+                     <h5 class="mb-4 mt-4">Edit Personal Details</h5>
+                     <div class="form-group row">
+                        <div class="col-lg-4">
+                           <label for="" class="mb-3">Phone</label>
+                           <input type="tel" class="form-control" placeholder="Enter Phone No." required="">
+                           <div class="invalid-feedback">Enter Phone Number.</div>
+                        </div>
+                        <div class="col-lg-4">
+                           <label for="" class="mb-3">Email</label>
+                           <input type="email" class="form-control" placeholder="Enter Email Id" required="">
+                           <div class="invalid-feedback">Enter Email Id.</div>
+                        </div>
+                        <div class="col-lg-4">
+                           <label for="" class="mb-3">Birthday</label>
+                           <input type="date" class="form-control" value="" required="">
+                           <div class="invalid-feedback">Enter Birth Date.</div>
+                        </div>
+                        <div class="col-lg-12 mt-4">
+                           <label for="" class="mb-3">Address</label>
+                           <textarea class="form-control" name="" id="" cols="30" rows="3" value="" placeholder="Enter Address" required=""></textarea>
+                           <div class="invalid-feedback">Enter Address.</div>
+                        </div>
+                     </div>
+                  </div>
+                  <hr>
+                  <div class="col-lg-12 mb-4">
+                     <h5 class="mb-4 mt-4">Edit Bank Information</h5>
+                     <div class="form-group row">
+                        <div class="col-lg-4">
+                           <label for="" class="mb-3">Bank Name</label>
+                           <input type="text" class="form-control" placeholder="Enter Bank Name" required="">
+                           <div class="invalid-feedback">Enter Bank Name.</div>
+                        </div>
+                        <div class="col-lg-4">
+                           <label for="" class="mb-3">Bank Account No.</label>
+                           <input type="number" class="form-control" placeholder="Enter Bank Account No." required="">
+                           <div class="invalid-feedback">Enter Bank Account.</div>
+                        </div>
+                        <div class="col-lg-4">
+                           <label for="" class="mb-3">IFSC Code</label>
+                           <input type="text" class="form-control" placeholder="Enter IFSC Code" required="">
+                           <div class="invalid-feedback">Enter IFSC Code.</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <p class="text-center">
+                  <button type="submit" class="btn btn-success" name="submit"> <i class="bi bi-plus-circle"></i>  Add Employee</button>
+               </p>
+            </form>
+         </section>
+      </main>
+      <!-- ======= Footer ======= -->
+      <footer id="footer" class="footer">
+         <div class="copyright">
+            &copy; Copyright <strong><span>Battersea Web Expert</span></strong>. All Rights Reserved
+         </div>
+         <div class="credits">
+      </footer>
+      <!-- End Footer -->
+      <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+      <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/js/main.js"></script>
+      <script>
+         function preview() {
+             frame.src = URL.createObjectURL(event.target.files[0]);
+         }
+         function clearImage() {
+             document.getElementById('formFile').value = null;
+             frame.src = "";
+         }
+      </script>
+   </body>
+</html>
